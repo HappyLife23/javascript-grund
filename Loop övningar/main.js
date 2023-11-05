@@ -1,5 +1,6 @@
 /*======================= Loop - övningar =====================*/
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+// En "for"-loop fortsätter att upprepas tills ett särskilt villkor blir falskt.
 
 // 1. Basics med for:
 //- Skriv ut alla tal från 1 till 10 med hjälp av en `for`loop i konsolen.
@@ -24,6 +25,7 @@ printNumbersBtn.addEventListener('click', function () {
 });
 
 //––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+// En "while"-sats kör sina instruktioner så länge ett angivet villkor är sant.
 
 // 2. while loop:
 // Be användaren mata in ett lösenord. Använd en whileloop för att be användaren mata in lösenordet igen tills de matar in "javascript".
@@ -51,14 +53,35 @@ verifyPasswordBtn.addEventListener('click', function () {
             passwordOutput.textContent = 'Lösenordet är fel!!!'
             passwordInput.value = '';
             attempts--;
-            console.log('Lösenordet är fel!!!');           
-            
+            console.log('Lösenordet är fel!!!');                       
         }        
         attempts--;
         attempts--;
         attempts--;
         
     }
+});
+
+//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+// Satsen "do...while" upprepar sig tills ett angivet villkor blir falskt.
+
+// 3. do...while loop:
+// Använd en do...whileloop för att be användaren mata in ett nummer tills de matar in ett nummer större än 10.
+
+const numberGreaterInput = document.getElementById('numberGreaterInput');
+const checkGreaterBtn = document.getElementById('checkGreaterBtn');
+const numberGreaterOutput = document.getElementById('numberGreaterOutput');
+
+checkGreaterBtn.addEventListener('click', function () {
+    const greaterNumber = numberGreaterInput.value;
+
+    let i = 0;
+    do {
+        i += 1;
+        console.log(i);
+    } while (i < 10);
+        
+
 });
 
 
@@ -76,13 +99,6 @@ verifyPasswordBtn.addEventListener('click', function () {
 
 
 
-
-
-
-//––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-
-// 
-//
 
 
 
