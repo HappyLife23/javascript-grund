@@ -15,10 +15,6 @@ console.log(namelist);
 */
 names.push('Ali','Mohammed');
 const allCaps = names.map(function (name) {
-    
-    if (names === 'DAVID') {
-        
-    }
     return name.toUpperCase();    
 });
 
@@ -49,8 +45,8 @@ const movies = [
 
 
 const movieTitels = movies.map(function (movie) {
-    //return movie.title;
-    const data = [
+    //return movie.title; // retunerar ett värde
+    const data = [        // retunerar flera värden
         movie.title,
         movie.release
     ]
@@ -67,7 +63,8 @@ console.log(movieTitels);
 ----------------------*/
 const nums = [1, 2, 3, 4, 5]
 const filtered = nums.filter(function (num) {
-    return num > 3;
+    return num > 3; // retunerar värdet från index [3] och framåt 
+                    // output: [4,5]
 
 });
 console.log(filtered);
@@ -126,7 +123,7 @@ const movies = [
 ]
 
 
-let word = 'horror';
+let word = 'Comedy'; // skapar ett variabel som ska sedan i sin tur ändra det till uppercase 
 const horrorMovies = movies.filter(function (movie) {
     return movie.genre.toLocaleLowerCase().includes(word.toLocaleLowerCase()) || movie.genre.includes('Action');
 });
