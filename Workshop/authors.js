@@ -30,17 +30,10 @@ const findFake = authors.findIndex(author => author.first === 'Koldan');
 if (findFake !== -1) {
     authors.splice(findFake, 1);
 }
-
 const allFakeNames = authors.map(author => `<li>${author.first}</li>`).join('');
 
 ul.innerHTML = allFakeNames; // innerHTML authors namn
 document.body.appendChild(ul);
-//ul.innerHTML = authors; // retunerar objects
-//ul.innerHTML = findFake; // retunerar
-//console.log(findFake); //  consol-loggar -1
-//console.log(authors); //  consol-loggar authors
-//console.log(show); // consol-loggar authors med li-style
-
 
   // Använd Array.prototype.map
   // 5. Skapa en array med varje författares för- och efternamn från arrayen authors

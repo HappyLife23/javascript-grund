@@ -3,3 +3,6 @@ body {
   background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
   background: linear-gradient(to right, #ffffff, #abbaab);
 }
+ul {
+  list-style-type: none;
+}
