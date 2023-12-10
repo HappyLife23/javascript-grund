@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sarvin</title>
+    <title>SarvinStyle Codding</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Wellcome</h1>
-    <div class="container"></div>
-    <script src="main.js"></script>
+    <header>
+      <h2>SarvinStyle Codding</h2>
+    </header>
+
+    <section class="container">
+      <form id="my-form">
+        <h2>Add User</h2>
+        <div class="msg"></div>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="name..." />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" placeholder="email..." />
+        </div>
+        <input class="btn" type="submit" value="Submit" />
+      </form>
+
+      <ul id="users"></ul>
+
+      <ul class="items">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+      </ul>
+    </section>
+
+    <script src="index.js"></script>
   </body>
 </html>
