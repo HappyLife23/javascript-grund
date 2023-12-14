@@ -35,7 +35,6 @@ document.addEventListener('click', function () {
 document.addEventListener('click', () => console.log('click'));
 
 /*-------------------------------------------------------------------------------*/
-
 /**------------------------- 
  * filter() and map() metoder 
  * ------------------------**/
@@ -81,7 +80,8 @@ const products = [
         rating: 4.6,
         inStock: false
     }
-    ];
+];
+
 
 // filter() metoden med hjälp av arrow-function (price)   
 let priceQuery = 200;
@@ -116,18 +116,6 @@ let totalPrice = userCart.reduce((totalPrice, currentElement) => {
 }, 0); // total ska börja med noll
 
 console.log(totalPrice);
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*
