@@ -126,3 +126,9 @@ console.log(mittNyaKonto.visaSaldo());
 
 mittKonto.taUt(800);
 console.log(mittKonto.visaSaldo());
+
+/**  i detta exempel är #saldo ett 
+ * privat fält i klassen Bnakkonto. det kan inte nås direkt utanför klassen, uten endast via de metoder(insättning, taUt, visaSaldo) som klassen tillhandahåller.
+ * detta är kärnan i inskapling
+ * 
+ * **/
