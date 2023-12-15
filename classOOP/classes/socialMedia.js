@@ -1,3 +1,5 @@
+// detta är vår parent klass 
+
 class socialMedia {
     constructor(name, city) {
         this.name = name;
@@ -9,6 +11,7 @@ class socialMedia {
     }
 }
 
-let minSocialMedia = new socialMedia('David Heidari', 'Göteborg');
-console.log(minSocialMedia.addSocial());
+
+
+
 
