@@ -2,7 +2,7 @@
 
 const apiKey = 'abf418b44e6f58c40e6819f49d423a35';
 
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}`;
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=göteborg&appid=${apiKey}`;
 
 
 const container = document.querySelector('.container');
@@ -28,12 +28,12 @@ fetch(apiUrl)
                 <div class="second">       
                     <p> Temperature in ${location}: ${temperature}°C</p>
                     <p>Weather: ${description}</p>
-                    <img src="./assets/sun.png" />
+                    <img src="./assets/rain.png" />
                 </div>  
                 <div class="third">
                     <p> Temperature in ${location}: ${temperature}°C</p>
                     <p>Weather: ${description}</p>
-                    <img src="./assets/sun.png" />
+                    <img src="./assets/cloud.png" />
                 </div>
             
                 
