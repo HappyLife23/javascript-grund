@@ -1,5 +1,5 @@
 /* Example 1: Fetching Weather Data */
-
+// http://api.weatherapi.com/v1/forecast.json?key=&q=sweden&days=3&aqi=no&alerts=no
 const apiKey = 'abf418b44e6f58c40e6819f49d423a35';
 
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=göteborg&appid=${apiKey}`;
