@@ -118,16 +118,24 @@ fetch(apiUrl)
         const description = data.weather[0].description;
         const location = data.name;
         container.innerHTML = 
-            ` <div>
-                <p> Temperature in ${location}: ${temperature}°C</p>
-                <p>Weather: ${description}</p>
-                <img src="./assets/sun.png" />
+            ` 
+                <div class="first">
+                    <p> Temperature in ${location}: ${temperature}°C</p>
+                    <p>Weather: ${description}</p>
+                    <img src="./assets/sun.png" />  
+                </div>    
+                <div class="second">       
+                    <p> Temperature in ${location}: ${temperature}°C</p>
+                    <p>Weather: ${description}</p>
+                    <img src="./assets/sun.png" />
+                </div>  
+                <div class="third">
+                    <p> Temperature in ${location}: ${temperature}°C</p>
+                    <p>Weather: ${description}</p>
+                    <img src="./assets/sun.png" />
                 </div>
-                <div>
-                <p> Temperature in ${location}: ${temperature}°C</p>
-                <p>Weather: ${description}</p>
-                <img src="./assets/sun.png" />
-                </div>
+            
+                
             `
     })
     .catch(error => {
