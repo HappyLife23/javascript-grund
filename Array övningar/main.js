@@ -31,7 +31,7 @@ const array2 = ['d', 'e', 'f'];
 const array3 = [1, 2, 3 ]
 
 const array4 = array2.concat(array1, array3);
-console.log(array4);
+console.log(`Concat: ${array4}`);
 
 /*------------------------------ filter()-----------------------------
 -- filter metoden skapar en ytlig kopia av den befintliga arrayen, där endast
@@ -42,7 +42,7 @@ bara de refereras till.
 const words = ['David', 'Sofie', 'Peterrrrr', 'Frank', 'Magdaaaa', 'Linda'];
 const result = words.filter((word) => word.length < 6);
 
-console.log(result);
+console.log(`filter: ${result}`);
 
 
 /*------------------------------ find()-----------------------------
@@ -56,8 +56,8 @@ const found = nums.find((num) => num === 'Sofie');
 // eller 
 const found2 = nums.find((num) => num.length > 5);
 
-console.log(found);
-console.log(found2);
+console.log(`find: ${found}`);
+console.log(`find: ${found2}`);
 
 /*------------------------------ findIndex() -----------------------------
 -- en metod för att hitta indexet för för det första elementet som uppfyller 
@@ -70,21 +70,42 @@ const result1 = (nums) => nums > 17;
 const names = ['sofie', 'david', 'sara', 'peter'];
 const whichName = (name) => name === 'ali';
 
-const sofieName = ['']
+const sofieNames = ['david', 'ali', 'bob','balal']
+const goSofie = (sofieName) => sofieName === 'bob';
 
-
-
+console.log('findIndex-metoden:');
 console.log(nums1.findIndex(result1));
 console.log(names.findIndex(whichName));
-
+console.log(sofieNames.findIndex(goSofie));
 
 
 /*------------------------------ forEach() -----------------------------
--- 
+-- metoden utför en given funktion en gång för varje element i arrayen
+ Du kan inte fortsätta att lägga på fler metoder efter forEach() i samma kedja.
 */
+// ex.1
+const colors = ['blue', 'red', 'pink', 'yellow'];
+colors.forEach((color) => console.log(`forEeach: ${color}`));
+
+// ex.2, skriver dock inte ut nåt
+const items = ['item1', 'item2', 'item3'];
+const copyItems = [];
+
+items.forEach((item) => {
+    copyItems.push(item);
+});
+
+
 /*------------------------------ includes() -----------------------------
--- 
+-- metoden avgör om arrayen innehåller det elementet som efterfrågas och 
+retunerar true eller false
 */
+const pets = ['cat', 'dog', 'lion', 'tiger'];
+console.log(pets.includes('cat'));
+console.log(pets.includes('elephant'));
+
+
+
 /*------------------------------ indexOf() -----------------------------
 -- 
 */
