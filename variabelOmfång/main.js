@@ -20,6 +20,6 @@ function greet() {
     //console.log(blockScope)
 }
 greet();
-console.log(a + b)
+//console.log(a + b)
 
 

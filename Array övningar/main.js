@@ -42,7 +42,7 @@ bara de refereras till.
 const words = ['David', 'Sofie', 'Peterrrrr', 'Frank', 'Magdaaaa', 'Linda'];
 const result = words.filter((word) => word.length < 6);
 
-console.log(`filter: ${result}`);
+console.log(`\nfilter: ${result}`);
 
 
 /*------------------------------ find()-----------------------------
@@ -56,8 +56,8 @@ const found = nums.find((num) => num === 'Sofie');
 // eller 
 const found2 = nums.find((num) => num.length > 5);
 
-console.log(`find: ${found}`);
-console.log(`find: ${found2}`);
+console.log(`\nfind: ${found}`);
+console.log(`\nfind: ${found2}`);
 
 /*------------------------------ findIndex() -----------------------------
 -- en metod för att hitta indexet för för det första elementet som uppfyller 
@@ -73,7 +73,7 @@ const whichName = (name) => name === 'ali';
 const sofieNames = ['david', 'ali', 'bob','balal']
 const goSofie = (sofieName) => sofieName === 'bob';
 
-console.log('findIndex-metoden:');
+console.log('\nfindIndex-metoden:');
 console.log(nums1.findIndex(result1));
 console.log(names.findIndex(whichName));
 console.log(sofieNames.findIndex(goSofie));
@@ -100,6 +100,7 @@ items.forEach((item) => {
 -- metoden avgör om arrayen innehåller det elementet som efterfrågas och 
 retunerar true eller false
 */
+console.log('\nincludes():');
 const pets = ['cat', 'dog', 'lion', 'tiger'];
 console.log(pets.includes('cat'));
 console.log(pets.includes('elephant'));

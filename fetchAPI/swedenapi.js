@@ -1,7 +1,7 @@
 /* Example 1: Fetching Weather Data */
 
 const apiKey = '0f6869a37d6f4d38b7d111034230912';
-const apiUrl =`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=spain&days=3&aqi=no&alerts=no`
+const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=spain&days=3&aqi=no&alerts=no`;
 
 const container = document.querySelector('.container');
 
@@ -21,6 +21,7 @@ fetch(apiUrl)
             <div class="first">
                 <img src="" class='weather-icon'/>
                 <div class = 'weather-info'>
+                <h4>${new Date(dateDays[0]).toLocaleDateString()}</h4>
                     <h4>Idag</h4>  
                     <div class='current-weather'>
                         <p>${data.current.temp_c}°C</p>
@@ -31,7 +32,8 @@ fetch(apiUrl)
             <div class="second">
                 <img src="" class='weather-icon'/>
                 <div class = 'weather-info'>
-                <h4>Date ${new Date(dateDays[2]).toLocaleDateString()}</h4>
+                <h4>${new Date(dateDays[1]).toLocaleDateString()}</h4>
+                
                     <h4>Imorgon</h4> 
                     <div class='current-weather'>
                         <p>${data.current.temp_c}°C</p>
@@ -42,6 +44,7 @@ fetch(apiUrl)
                 <div class="third">
                 <img src="" class='weather-icon'/>
                 <div class = 'weather-info'> 
+                <h4>${new Date(dateDays[2]).toLocaleDateString()}</h4>
                     <h4>Fredag</h4>
                     <div class='current-weather'>
                         <p>${data.current.temp_c}°C</p>
@@ -82,3 +85,5 @@ fetch(apiUrl)
      * <h4>Date ${new Date(dateDays[1]).toLocaleDateString()}</h4>
      * <h4>Date ${new Date(dateDays[2]).toLocaleDateString()}</h4>
      */
+
+    
