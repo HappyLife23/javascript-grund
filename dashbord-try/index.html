@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- meta description -->
+    <meta
+      name="description"
+      content="This page is about your personal dashboard"
+    />
+    <title>Dashboard</title>
+    <!-- min CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- skapar en container till alla mina element -->
+    <div class="container">
+      <!-- punkt-1 -->
+      <div class="time-date">
+        <div class="date"></div>
+        <div class="time"></div>
+      </div>
+      <!-- punkt-2 -->
+      <div class="titel">
+        <input
+          type="text"
+          class="name-input"
+          id="nameInput"
+          placeholder="DJohn Doe Dashboard"
+        />
+      </div>
+
+      <!-- punkt-3 -->
+      <div class="quick-links">
+        <h2>Snabblänkar</h2>
+        <!-- skapa en till input -->
+        <ul class="ulList"></ul>
+        <input type="text" id="linkInput" placeholder="Lägg till en länk" />
+      </div>
+
+      <!-- punkt-4 -->
+      <div class="weather-report">
+        <h2>Dagens väder</h2>
+      </div>
+      <!-- punkt-5 -->
+      <div class="stock-market">
+        <h2>Börsen idag</h2>
+      </div>
+      <!-- punkt-6 -->
+      <div class="notes">
+        <h2>Anteckningar</h2>
+        <!-- text area input -->
+        <textarea
+          name="userNotes"
+          id="userNotes"
+          cols="25"
+          rows="10"
+        ></textarea>
+      </div>
+      <!-- punkt-7 -->
+      <div class="change-background">
+        <p>Slumpa ny backgrund</p>
+      </div>
+    </div>
+
+    <script src="date.js"></script>
+    <script src="name.js"></script>
+
+    <script src="weather.js"></script>
+    <script src="bg.js"></script>
+
+    <!-- Länk till mina js-filer 
+      <script src="links.js"></script>
+    <script src="stock.js"></script>
+    <script src="notes.js"></script>
+    
+    -->
+  </body>
+</html>

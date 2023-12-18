@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: darkgrey;
+}
+/* container CSS */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  height: 100vh;
+}
+/* punkt 1 CSS */
+.time-date {
+  /*grid-column: 1 / span 3;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 10%;
+  width: 300px;
+  background-color: lightgray;
+  border-radius: 30px;
+  padding: 3px 30px;
+  gap: 20px;
+}
+/* punkt 2 CSS */
+.titel {
+  grid-column: 1 / span 3;
+  gap: 25px;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+#nameInput {
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+}
+
+.stock-market,
+.notes {
+  border-radius: 10px;
+  background-color: lightgray;
+  gap: 25px;
+  text-align: center;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* punkt 3 CSS */
+
+.quick-links {
+  grid-column: 1 / span 3;
+  border-radius: 10px;
+  background-color: lightgray;
+  gap: 25px;
+  text-align: center;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  overflow: scroll;
+  border-radius: 10px;
+}
+.ulList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  justify-content: space-between;
+  gap: 10px;
+}
+.ulList a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 10px 50px;
+  color: black;
+  display: block;
+}
+.list-group-item {
+  display: flex;
+  background-color: aliceblue;
+  gap: 10px;
+  border: none;
+  border-radius: 5px;
+}
+.delBtn {
+  border: none;
+  background-color: aliceblue;
+  padding-right: 5px;
+  border-radius: 5px;
+}
+
+#linkInput {
+  border: none;
+  width: 60%;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* punt 4 CSS */
+.weather-report {
+  grid-column: 1 / span 3;
+  display: flex;
+  border-radius: 10px;
+  background-color: lightgray;
+  gap: 5px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-icon {
+  width: 4rem;
+  height: 4rem;
+}
+.first,
+.second,
+.third {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px 1rem;
+  display: flex;
+  background-color: white;
+  gap: 50px;
+  width: 90%;
+  height: auto;
+}
+.first h4,
+.second h4,
+.third h4 {
+  padding-bottom: 10px;
+}
+.current-weather {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.current-weather p {
+  background-color: lightgray;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+.weather-info {
+  display: flex;
+  flex-direction: column;
+}
+
+/* punt 5 CSS */
+.stock-market {
+  grid-column: 1 / span 3;
+}
+/*------- punkt-6 ----------*/
+.notes {
+  grid-column: 1 / span 3;
+}
+#userNotes {
+  background-color: aliceblue;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  line-height: 1.3rem;
+  font-size: 1.1rem;
+}
+
+/* punkt 7 CSS */
+.change-background {
+  grid-column: 1 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: rgb(235, 227, 227);
+  border-radius: 10px;
+  padding: 8px 15px;
+  border: none;
+  width: 200px;
+  margin: 20px 28%;
+}
+.change-background p {
+  color: black;
+}
+
+/*----- media query-------*/
+@media (min-width: 768px) and (max-width: 2220px) {
+  body {
+    height: 100vh;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 150px 300px 100px;
+    width: 100;
+    height: 100vh;
+  }
+  .time-date {
+    grid-column: 1 / span 4;
+    height: 50px;
+    gap: 50px;
+    margin: 0 38%;
+  }
+  .titel {
+    grid-column: 1 / span 4;
+    height: 0;
+    margin-bottom: 0;
+  }
+  .titel {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    height: 0;
+  }
+  .quick-links {
+    grid-column: 1 / span 1;
+    height: 30vh;
+  }
+  .weather-report {
+    grid-column: 2 / span 1;
+    height: 30vh;
+  }
+  .stock-market {
+    grid-column: 3 / span 1;
+    height: 30vh;
+  }
+  .notes {
+    grid-column: 4 / span 1;
+    height: 30vh;
+  }
+  .change-background {
+    grid-column: 1 / span 4;
+    height: 40px;
+    margin: 30% 42%;
+  }
+}
