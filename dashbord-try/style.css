@@ -166,6 +166,7 @@ body {
 
 /* punt 5 CSS */
 .bored-api {
+  grid-column: 1 / span 3;
   border-radius: 10px;
   background-color: lightgray;
 }
