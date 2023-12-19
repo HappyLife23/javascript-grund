@@ -1,0 +1,54 @@
+let url = 'http://www.boredapi.com/api/activity?type=recreational';
+
+fetch(url)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok.');                
+        }
+        return response.json();             
+    })
+    .then(data => {
+        const boredApi = document.querySelector('.bored-api');
+        
+        let para = data.activity;
+        let participants = data.participants;
+        let price = data.price;
+        let link = data.link;
+
+        console.log("Data: ", data);
+/*
+        if (link === '') {
+            display = 'none';
+            
+
+        } else {
+            display = 'block';
+        }
+*/
+        boredApi.innerHTML = `
+        <div class = 'header'>
+            <h2>The Bored API</h2>
+            <h4>Let's find you something to do</h4>
+        </div>
+        <div class="boredInput">         
+          <p><strong>Activity:</strong> ${para}</p>
+          <p><strong>Participants:</strong> ${participants}</p>
+          <p><strong>price:</strong> ${price}</p>
+          <p><strong>Link:</strong><a href="${link}"></a></p>       
+        </div>
+        `
+        
+    })
+
+    .catch(error => {
+        console.error('Error', error);
+    })
+   
+
+
+
+
+
+
+
+

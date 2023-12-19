@@ -48,7 +48,6 @@ body {
   border: 1px solid lightgray;
 }
 
-.stock-market,
 .notes {
   border-radius: 10px;
   background-color: lightgray;
@@ -166,9 +165,25 @@ body {
 }
 
 /* punt 5 CSS */
-.stock-market {
-  grid-column: 1 / span 3;
+.bored-api {
+  border-radius: 10px;
+  background-color: lightgray;
 }
+.header {
+  text-align: center;
+  padding: 20px 0;
+  gap: 10px;
+}
+.header h2 {
+  padding-bottom: 10px;
+}
+.boredInput {
+  padding-left: 10px;
+}
+.boredInput p {
+  padding: 10px;
+}
+
 /*------- punkt-6 ----------*/
 .notes {
   grid-column: 1 / span 3;
@@ -230,19 +245,15 @@ body {
   }
   .quick-links {
     grid-column: 1 / span 1;
-    height: 30vh;
   }
   .weather-report {
     grid-column: 2 / span 1;
-    height: 30vh;
   }
-  .stock-market {
+  .bored-api {
     grid-column: 3 / span 1;
-    height: 30vh;
   }
   .notes {
     grid-column: 4 / span 1;
-    height: 30vh;
   }
   .change-background {
     grid-column: 1 / span 4;
