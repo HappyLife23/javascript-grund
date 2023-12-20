@@ -14,17 +14,16 @@ fetch(url)
         let participants = data.participants;
         let price = data.price;
         let link = data.link;
+        let aLink;
 
         console.log("Data: ", data);
-/*
-        if (link === '') {
-            display = 'none';
-            
 
+        if (link === '') {
+            aLink = ''
         } else {
-            display = 'block';
+            aLink = `<p><strong></strong><a href="${link}">Länk</a></p>`
         }
-*/
+
         boredApi.innerHTML = `
         <div class = 'header'>
             <h2>The Bored API</h2>
@@ -34,7 +33,7 @@ fetch(url)
           <p><strong>Activity:</strong> ${para}</p>
           <p><strong>Participants:</strong> ${participants}</p>
           <p><strong>price:</strong> ${price}</p>
-          <p><strong>Link:</strong><a href="${link}"></a></p>       
+          ${aLink}
         </div>
         `
         
