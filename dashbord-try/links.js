@@ -75,6 +75,8 @@ function displayLocal(link) {
      a.href = link;
      a.className = 'link';
      delBtn.className = 'delBtn';
+    
+
      delBtn.value = link;     
      a.textContent = link; 
  
