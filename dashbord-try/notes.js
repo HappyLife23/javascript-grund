@@ -44,7 +44,7 @@ userNotes.addEventListener('input', function () {
     saveNote();
 });
 
-userNotes.value = noteStorage;
+//userNotes.value = noteStorage;
 
 
 

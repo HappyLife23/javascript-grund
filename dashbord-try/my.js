@@ -21,7 +21,7 @@ fetch(url)
         if (link === '') {
             aLink = ''
         } else {
-            aLink = `<p><strong></strong><a href="${link}">Länk</a></p>`
+            aLink = `<p><strong></strong><a href="${link}">Klick here to see how its work!</a></p>`
         }
 
         boredApi.innerHTML = `
@@ -31,8 +31,8 @@ fetch(url)
         </div>
         <div class="boredInput">         
           <p><strong>Activity:</strong> ${para}</p>
-          <p><strong>Participants:</strong> ${participants}</p>
-          <p><strong>price:</strong> ${price}</p>
+          <p><strong>Participants:<strong> ${participants}</p>
+          <p><strong>Price:</strong> ${price} $</p>
           ${aLink}
         </div>
         `
