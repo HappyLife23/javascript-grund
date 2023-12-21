@@ -1,6 +1,7 @@
 const quickLinks = document.querySelector('.quick-links')
 const linkInput = document.getElementById('linkInput');
 const ulList = document.querySelector('.ulList');
+const materialSymbolsOutlined = document.querySelector('.material-symbols-outlined');
 
 // Enter event 
 linkInput.addEventListener('keypress', (e) => {
@@ -31,6 +32,8 @@ function addItem() {
     // skapar element inut min quick-link
     const li = document.createElement('li');
     const a = document.createElement('a');
+    
+    
     const delBtn = document.createElement('button');
     delBtn.textContent = 'X';
 

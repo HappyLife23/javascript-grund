@@ -5,9 +5,6 @@ let userNotes = document.getElementById('userNotes')
 let test = JSON.parse(localStorage.getItem('userNotes'));
 userNotes.value = test;
 
-// Försök att hämta befintliga anteckningar från localStorage
-let noteStorage = JSON.parse(localStorage.getItem(''));
-
 // Funktion för att spara anteckningar till localStorage
 function saveNote() {
     localStorage.setItem('userNotes', JSON.stringify(noteStorage));

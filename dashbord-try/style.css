@@ -12,6 +12,11 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+/*-- icon style --*/
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 20;
+}
+
 /* container CSS */
 .container {
   display: grid;
@@ -33,34 +38,33 @@ body {
   border-radius: 30px;
   padding: 3px 30px;
   gap: 20px;
+  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 25px rgba(105, 6, 6, 0.2);
 }
 /* punkt 2 CSS */
 .titel {
   grid-column: 1 / span 3;
-  gap: 25px;
-  padding: 1rem;
-  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 }
 #nameInput {
-  font-size: 1rem;
+  font-size: 3rem;
   text-align: center;
   border: none;
   padding: 0.5rem 2rem;
   border-radius: 10px;
-  border: 1px solid lightgray;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  color: black;
 }
 
-.notes {
-  border-radius: 10px;
-  background-color: lightgray;
-  gap: 25px;
-  text-align: center;
-  padding-top: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 /* punkt 3 CSS */
 
 .quick-links {
@@ -73,10 +77,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  overflow: scroll;
-  border-radius: 10px;
+  padding-bottom: 10px;
+  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 }
+.inputBox {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+#linkIput::marker {
+  background-color: white;
+}
+
 .ulList {
   list-style-type: none;
   display: flex;
@@ -87,47 +102,52 @@ body {
 }
 .ulList a {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 10px 50px;
   color: black;
   display: block;
 }
 .list-group-item {
   display: flex;
-  background-color: aliceblue;
+  background-color: white;
   gap: 10px;
   border: none;
   border-radius: 5px;
 }
 .delBtn {
   border: none;
-  background-color: aliceblue;
+  background-color: white;
   padding-right: 5px;
   border-radius: 5px;
 }
 
 #linkInput {
   border: none;
-  width: 60%;
   font-size: 1rem;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 10px;
+  padding: 0.5rem 0;
   text-align: center;
+  border-radius: 10px;
 }
+/*
+#linkInput.textarea:focus {
+  background-color: darkgray;
+}
+*/
 
 /* punt 4 CSS */
 .weather-report {
   grid-column: 1 / span 3;
   display: flex;
   border-radius: 10px;
-  background-color: lightgray;
   gap: 5px;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 20px;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 }
 
 .weather-icon {
@@ -137,7 +157,6 @@ body {
 .first,
 .second,
 .third {
-  border: 1px solid;
   border-radius: 10px;
   padding: 10px 1rem;
   display: flex;
@@ -157,7 +176,7 @@ body {
   gap: 5px;
 }
 .current-weather p {
-  background-color: lightgray;
+  background-color: rgb(234, 232, 232);
   text-align: center;
   border-radius: 5px;
   padding: 5px 5px;
@@ -171,7 +190,9 @@ body {
 .bored-api {
   grid-column: 1 / span 3;
   border-radius: 10px;
-  background-color: lightgray;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 }
 .header {
   text-align: center;
@@ -196,6 +217,15 @@ body {
 /*------- punkt-6 ----------*/
 .notes {
   grid-column: 1 / span 3;
+  border-radius: 10px;
+  gap: 25px;
+  text-align: center;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(30px);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 }
 #userNotes {
   background-color: aliceblue;
@@ -213,20 +243,33 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  background-color: rgb(235, 227, 227);
   border-radius: 10px;
   padding: 8px 15px;
   border: none;
   width: 200px;
   margin: 20px 28%;
+  /*
+  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 25px rgba(105, 6, 6, 0.2);
+  */
 }
 .change-background-btn {
   cursor: pointer;
   padding: 8px 15px;
   border: none;
-  color: black;
-  background-color: rgb(235, 227, 227);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  color: white;
 }
+/*
+.change-background .change-background-btn {
+  backdrop-filter: blur(30px);
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 15px 25px rgba(105, 6, 6, 0.2);
+}
+*/
 
 /*----- media query-------*/
 @media (min-width: 768px) and (max-width: 2220px) {
