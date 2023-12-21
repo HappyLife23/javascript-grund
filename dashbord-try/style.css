@@ -88,16 +88,12 @@ body {
   display: flex;
   align-items: center;
 }
-#linkIput::marker {
-  background-color: white;
-}
 
 .ulList {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  justify-content: space-between;
   gap: 10px;
 }
 .ulList a {
@@ -113,12 +109,16 @@ body {
   gap: 10px;
   border: none;
   border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 }
 .delBtn {
-  border: none;
-  background-color: white;
-  padding-right: 5px;
-  border-radius: 5px;
+  border: 1px solid darkgray;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 #linkInput {
@@ -127,6 +127,9 @@ body {
   padding: 0.5rem 0;
   text-align: center;
   border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 }
 /*
 #linkInput.textarea:focus {
@@ -164,6 +167,9 @@ body {
   gap: 50px;
   width: 90%;
   height: auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 }
 .first h4,
 .second h4,
@@ -180,6 +186,9 @@ body {
   text-align: center;
   border-radius: 5px;
   padding: 5px 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
 }
 .weather-info {
   display: flex;
@@ -249,11 +258,6 @@ body {
   border: none;
   width: 200px;
   margin: 20px 28%;
-  /*
-  backdrop-filter: blur(30px);
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 15px 25px rgba(105, 6, 6, 0.2);
-  */
 }
 .change-background-btn {
   cursor: pointer;

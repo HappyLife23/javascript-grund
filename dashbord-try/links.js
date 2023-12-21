@@ -35,7 +35,7 @@ function addItem() {
     
     
     const delBtn = document.createElement('button');
-    delBtn.textContent = 'X';
+    delBtn.textContent = '-';
 
     // ger mina element ett class namn    
     li.className = 'list-group-item';
