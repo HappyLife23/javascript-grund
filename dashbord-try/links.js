@@ -3,7 +3,7 @@ const linkInput = document.getElementById('linkInput');
 const ulList = document.querySelector('.ulList');
 const materialSymbolsOutlined = document.querySelector('.material-symbols-outlined');
 
-// Enter event 
+// Enter EventListener
 linkInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         addItem();       
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     getquickLinks();
 });
 
+// skapar en funktion där jag hämtar mina skrivna länkar från key som heter 'link'. För att det ska vara läslig för JavaScript måste jag 'parsa' den.
 function getquickLinks() {
     let fastLinks = JSON.parse(localStorage.getItem('link'));
     
@@ -25,27 +26,28 @@ function getquickLinks() {
     });  
 }
 
-linkList = [];
+linkList = []; // listan på min key value
 
+// Skapar en funktion och i funktionen skapar jag mina li-element, a-element och appendar de till deras parent och de får varsit class namn för att kunna styla de enklare senare.
 function addItem() {
 
-    // skapar element inut min quick-link
+    // skapar element inut min ulList
     const li = document.createElement('li');
     const a = document.createElement('a');
     
-    
+    // Skapar en button och ger den en textContent
     const delBtn = document.createElement('button');
     delBtn.textContent = '-';
 
     // ger mina element ett class namn    
     li.className = 'list-group-item';
-    a.href = linkInput.value;
     a.className = 'link';
     delBtn.className = 'delBtn';
     
-    // skall värdet på li synas på skärmen
+    // skall värdet på li och a synas på skärmen
     li.textContent = a.value;
     a.textContent = linkInput.value; 
+    a.href = linkInput.value;
 
     // appendar    
     ulList.appendChild(li);
@@ -70,8 +72,9 @@ function displayLocal(link) {
      // skapar element inut min quick-link
      const li = document.createElement('li');
      const a = document.createElement('a');
-     const delBtn = document.createElement('button');
-     delBtn.textContent = 'X';
+     
+    const delBtn = document.createElement('button');
+     delBtn.textContent = '-';
  
      // ger mina element ett class namn    
      li.className = 'list-group-item';
@@ -92,7 +95,7 @@ function displayLocal(link) {
     delBtn.addEventListener('click', (e) => {
         delBtn.parentElement.remove();
         linkList = JSON.parse(localStorage.getItem('link'));
-        console.log(linkList)
+        //console.log(linkList)
         linkList = linkList.filter((link) => {
             return link !== e.target.value;            
         });

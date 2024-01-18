@@ -1,0 +1,10 @@
+-- Best Practice: Always use 'const' if you know that löater in the program det value of a variable going to change use 'let'.
+
+
+-- let age;
+ - age = 30;
+ * this mean that you change the value, later on.
+
+
+-- 
+
